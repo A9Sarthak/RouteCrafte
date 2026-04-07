@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packing List - RouteCraft</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <!-- Google Material Icons (Matches React App) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Styling to perfectly match the Tailwind CSS React App */
+    :root {
+      --primary: #0ea5e9; /* Tailwind sky-500 */
+      --primary-hover: #0284c7; /* Tailwind sky-600 */
+      --bg-light: #f8fafc; /* Tailwind slate-50 */
+      --text-main: #0f172a; /* Tailwind slate-900 */
+      --text-muted: #64748b; /* Tailwind slate-500 */
+      --border-color: #e2e8f0; /* Tailwind slate-200 */
+    }
+    
+    body { 
+      background-color: transparent; 
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    
+    /* Fake Navbar to match RouteCraft */
+    .rc-navbar {
+      background-color: white;
+      border-bottom: 1px solid var(--border-color);
+      height: 72px; /* typical navbar height */
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    
+    .rc-brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rc-brand-icon {
+      background-color: var(--primary);
+      color: white;
+      border-radius: 6px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btn-primary-rc {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+    }
+    .btn-primary-rc:hover {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2), 0 2px 4px -1px rgba(14, 165, 233, 0.1);
+    }
+    
+    .card-rc {
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .list-group-item-rc {
+      border: 1px solid var(--border-color) !important;
+      border-radius: 0.5rem !important;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    
+    .badge-rc {
+      background-color: #f1f5f9;
+      color: var(--text-muted);
+      cursor: pointer;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .badge-rc:hover {
+      background-color: #fee2e2;
+      color: #ef4444;
+    }
+    
+    .form-control-rc {
+      border-radius: 0.5rem 0 0 0.5rem;
+      border: 2px solid var(--border-color);
+      padding: 0.75rem 1rem;
+    }
+    .form-control-rc:focus {
+      border-color: var(--primary);
+      box-shadow: none;
+    }
+    .btn-add-rc {
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1 w-100">
+    <div class="container-fluid p-4">
+      <div class="row">
+        <div class="col-12">
+              
+              <div class="input-group mb-4">
+                <input type="text" id="newItem" class="form-control form-control-rc" placeholder="E.g. Travel adapter, Passport...">
+                <button class="btn btn-primary-rc btn-add-rc" type="button" id="addItemBtn">Add Item</button>
+              </div>
+              
+              <ul class="list-group list-group-flush" id="packingList" style="padding-left: 0;">
+                <li class="list-group-item-rc">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="material-icons-outlined text-primary" style="font-size: 20px;">check_circle</span>
+                    Passport & IDs
+                  </div>
+                  <button class="badge-rc remove-btn">Remove</button>
+                </li>
+                <li class="list-group-item-rc">
+                  <div class="d-flex align-items-center gap-2">
+                     <span class="material-icons-outlined text-primary" style="font-size: 20px;">check_circle</span>
+                     Phone Charger
+                  </div>
+                  <button class="badge-rc remove-btn">Remove</button>
+                </li>
+              </ul>
+
+              <div class="mt-4 alert alert-success d-flex align-items-center gap-2" id="statusMessage" style="display: none !important; border-radius: 0.5rem; font-size: 0.9rem; font-weight: 600;">
+                <span class="material-icons-round" style="font-size: 18px;">task_alt</span>
+                <span id="statusText">Item updated!</span>
+              </div>
+              
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      // Add item via jQuery
+      $('#addItemBtn').on('click', function() {
+        const val = $('#newItem').val().trim();
+        
+        if(val !== '') {
+          const liHtml = `
+            <li class="list-group-item-rc" style="display: none;">
+              <div class="d-flex align-items-center gap-2">
+                <span class="material-icons-outlined text-primary" style="font-size: 20px;">check_circle</span>
+                ${$('<div>').text(val).html()} 
+              </div>
+              <button class="badge-rc remove-btn">Remove</button>
+            </li>
+          `;
+          
+          const $li = $(liHtml);
+          $('#packingList').append($li);
+          $li.slideDown('fast'); 
+          
+          $('#newItem').val('').focus();
+          showStatus('Added "' + val + '" to list');
+        } else {
+          $('#newItem').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+      });
+
+      // Add item via Enter Key
+      $('#newItem').on('keypress', function(e) {
+         if(e.which == 13) {
+            $('#addItemBtn').click();
+         }
+      });
+      
+      // Delegation for remove buttons
+      $('#packingList').on('click', '.remove-btn', function() {
+        $(this).closest('li').slideUp('fast', function() {
+          $(this).remove(); 
+          showStatus('Item removed');
+        });
+      });
+
+      function showStatus(msg) {
+        $('#statusText').text(msg);
+        $('#statusMessage').css('display', 'flex').hide().fadeIn('fast').delay(2000).fadeOut('fast'); 
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RouteCraft - Sign Up</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "primary-hover": "#0f8cc9",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a262d",
+                        "text-main": "#0f172a",
+                        "text-muted": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2313a4ec' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center relative overflow-hidden font-display transition-colors duration-300">
+    
+    <div class="absolute inset-0 z-0 bg-hero-pattern"></div>
+    
+    <div
+        class="absolute inset-0 z-0 bg-gradient-to-tr from-primary/10 via-transparent to-primary/5 pointer-events-none">
+    </div>
+    
+    <div
+        class="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50 dark:opacity-20 animate-pulse">
+    </div>
+    
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-60 dark:opacity-10">
+    </div>
+    
+    <main class="w-full max-w-md mx-auto p-6 z-10 relative">
+        
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 mb-2">
+                <div
+                    class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 transform -rotate-3">
+                    <span class="material-icons-round text-white text-2xl">flight_takeoff</span>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">RouteCraft</h1>
+            </a>
+            <p class="text-text-muted dark:text-gray-400 text-sm">Design your perfect journey, start to finish.</p>
+        </div>
+        
+        <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-black/20 overflow-hidden border border-slate-100 dark:border-slate-800">
+            <div class="p-8">
+                <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Create your account</h2>
+                
+                <form action="#" class="space-y-5">
+                    
+                    <div class="space-y-1.5">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300" for="fullname">Full
+                            Name</label>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                <span class="material-icons-round text-[20px]">person_outline</span>
+                            </div>
+                            <input
+                                class="block w-full pl-10 pr-3 py-2.5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+                                id="fullname" name="fullname" placeholder="e.g. Amelia Earhart" required=""
+                                type="text" />
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1.5">
+                        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300" for="email">Email
+                            Address</label>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                <span class="material-icons-round text-[20px]">mail_outline</span>
+                            </div>
+                            <input
+                                class="block w-full pl-10 pr-3 py-2.5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+                                id="email" name="email" placeholder="name@example.com" required="" type="email" />
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300"
+                                for="password">Password</label>
+                        </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                                <span class="material-icons-round text-[20px]">lock_outline</span>
+                            </div>
+                            <input
+                                class="block w-full pl-10 pr-10 py-2.5 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200"
+                                id="password" name="password" placeholder="Min. 8 characters" required=""
+                                type="password" />
+                            <button
+                                class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 cursor-pointer"
+                                type="button">
+                                <span class="material-icons-round text-[20px]">visibility_off</span>
+                            </button>
+                        </div>
+                        <p class="text-xs text-text-muted mt-1 ml-1">Must contain at least 8 characters</p>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" id="terms"
+                                name="terms" type="checkbox" />
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label class="font-medium text-text-muted dark:text-gray-400" for="terms">I agree to the <a
+                                    class="text-primary hover:text-primary-hover underline decoration-primary/30 underline-offset-2"
+                                    href="#">Terms</a> and <a
+                                    class="text-primary hover:text-primary-hover underline decoration-primary/30 underline-offset-2"
+                                    href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    
+                    <a href="trip_analytics.html"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 text-center">
+                        Start Your Journey
+                    </a>
+                </form>
+                
+                <div class="relative mt-8 mb-6">
+                    <div aria-hidden="true" class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200 dark:border-gray-700"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span
+                            class="px-2 bg-white dark:bg-surface-dark text-xs font-medium text-gray-500 uppercase tracking-wider">Or
+                            continue with</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center w-full px-4 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                        type="button">
+                        <img alt="Google Logo" class="h-5 w-5 mr-2" data-alt="Google G logo in color"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuD6PhNB_qcUqTovfsQkhVWgBNwNEUyXtrbq7TiHcrKqLIi5YTHepewUhIUonKD88mAlUOr5o8M3FTUSUknNIjwyxOqqYFY07g1NdSOK_ToT6nDx3zULS2kALO7T49UW0uwOTEQtig5skVCtXrodZewIsOFf4NWHFG1PhOxb62tLt_FbL53yY7W9SqxPdIwuRXO3KgKbgL7iEVCMKvF29b4UjSWPSS4qEhuOdgbuThUi8R47jPC9qf0bwDXTlZB0XjcTBviv1IwtKB" />
+                        <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Google</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center w-full px-4 py-2.5 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                        type="button">
+                        <img alt="Apple Logo" class="h-5 w-5 mr-2 dark:invert" data-alt="Apple bitten apple logo black"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF_oHU5IaKI4KfQKiZukegszzzt1M_9ajJQ9vbCaAaXwGuEWi8h6MnrAQBaQa-a15eItu5UTCeqHmSY6g1As_lk0BGpSmcQTa8zjsl3RMNj5ItwetXVlynK_iyVtHbrA3hcmUev3fagKI49E-cun8iCJb_vCHQzsZfbNnJcMXunh5MHuId7cVqCTfyVKER6ORTqIOOvd_8CQamzsaa5zfIPcAuLOQ6YQFTR-A57gB7VXFDB_toDr-0OgrlgYeXE5vuXPIj3mJ3gzDA" />
+                        <span class="text-sm font-medium text-gray-700 dark:text-gray-200">Apple</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div
+                class="px-8 py-4 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Already have an account?
+                    <a class="font-semibold text-primary hover:text-primary-hover transition-colors"
+                        href="login.html">Log In</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="mt-8 text-center opacity-70">
+            <div
+                class="inline-flex items-center space-x-2 text-xs text-text-muted bg-white/50 dark:bg-black/20 px-3 py-1.5 rounded-full border border-white/60 dark:border-white/10 backdrop-blur-sm">
+                <span class="material-icons-round text-primary text-sm">tips_and_updates</span>
+                <span>"The journey of a thousand miles begins with a single step."</span>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

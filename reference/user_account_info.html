@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RouteCraft - User Account</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "primary-hover": "#0f8ccb",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a262d",
+                        "text-light": "#334155",
+                        "text-dark": "#cbd5e1",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark min-h-screen flex antialiased selection:bg-primary/30 selection:text-primary">
+    
+    <aside
+        class="w-64 fixed inset-y-0 left-0 bg-surface-light dark:bg-surface-dark border-r border-slate-200 dark:border-slate-800 flex flex-col z-20 hidden md:flex transition-colors duration-300">
+        
+        <div class="h-20 flex items-center px-8 border-b border-slate-100 dark:border-slate-800/50">
+            <a href="index.html" class="flex items-center gap-2 text-primary font-bold text-xl tracking-tight">
+                <span class="material-icons text-3xl">explore</span>
+                RouteCraft
+            </a>
+        </div>
+        
+        <nav class="flex-1 px-4 py-6 space-y-1">
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                href="trip_analytics.html">
+                <span class="material-icons text-slate-400 group-hover:text-primary transition-colors">dashboard</span>
+                <span class="font-medium">Overview</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                href="trip_analytics.html">
+                <span class="material-icons text-slate-400 group-hover:text-primary transition-colors">map</span>
+                <span class="font-medium">My Journeys</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                href="#">
+                <span class="material-icons text-slate-400 group-hover:text-primary transition-colors">bookmark</span>
+                <span class="font-medium">Saved Locations</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary dark:text-primary font-medium"
+                href="#">
+                <span class="material-icons text-primary">person</span>
+                <span>Account Settings</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                href="#">
+                <span
+                    class="material-icons text-slate-400 group-hover:text-primary transition-colors">credit_card</span>
+                <span class="font-medium">Billing</span>
+            </a>
+        </nav>
+        
+        <div class="p-4 border-t border-slate-100 dark:border-slate-800/50">
+            <a href="index.html"
+                class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium">
+                <span class="material-icons text-lg">logout</span>
+                Sign Out
+            </a>
+        </div>
+    </aside>
+    
+    <main class="flex-1 md:ml-64 p-6 lg:p-10 max-w-7xl mx-auto w-full">
+        
+        <div class="md:hidden flex items-center justify-between mb-8">
+            <a href="index.html" class="flex items-center gap-2 text-primary font-bold text-xl">
+                <span class="material-icons text-2xl">explore</span>
+                RouteCraft
+            </a>
+            <button
+                class="p-2 rounded-lg bg-white dark:bg-surface-dark shadow-sm border border-slate-200 dark:border-slate-800">
+                <span class="material-icons text-slate-600 dark:text-slate-300">menu</span>
+            </button>
+        </div>
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-800 dark:text-white mb-2">Account Settings</h1>
+            <p class="text-slate-500 dark:text-slate-400">Manage your profile, preferences and travel history.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <div class="lg:col-span-4 space-y-6">
+                
+                <div
+                    class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col items-center text-center">
+                    <div class="relative mb-4">
+                        <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-primary to-blue-300">
+                            <img alt="Profile picture of a smiling man"
+                                class="w-full h-full object-cover rounded-full border-4 border-white dark:border-surface-dark"
+                                data-alt="Portrait of Alex Traveller, a smiling man outdoors"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAisNRtQjAwlyC8brcXScOrLK_vkplyVmbZnzkyXoKKwopae0lbSlAOvRDMnYP9faVaSRcag2qXSumjig-GBf8r3-ZfA2lvzka5YQPp5xoxqDckWeqBdyVSh8uvxPJCe2_xOsrceszbu-nitiuWUJYxlb8H2BAdsyDCaDcAr2Pl60h3Z6rX_WpBd6WSfODAWJCfHcdYQSbP8FcM7GzNWykEEpOw9Dr3-SXl26FEXJKN-829uH509PRqkQuHcQjr7MejgDmOqSuypANY" />
+                        </div>
+                        <button aria-label="Change photo"
+                            class="absolute bottom-0 right-0 p-1.5 bg-primary text-white rounded-full hover:bg-primary-hover transition-colors shadow-sm">
+                            <span class="material-icons text-sm block">camera_alt</span>
+                        </button>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 dark:text-white">Alex Traveller</h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Global Explorer • Member since 2021</p>
+                    <button
+                        class="w-full py-2 px-4 rounded-lg border border-primary text-primary font-medium hover:bg-primary/5 transition-colors text-sm">
+                        Edit Public Profile
+                    </button>
+                </div>
+                
+                <div
+                    class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-5 flex items-center gap-2">
+                        <span class="material-icons text-primary">person_outline</span>
+                        Personal Details
+                    </h3>
+                    <form action="#" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                                for="fullName">Full Name</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-800 dark:text-white text-sm focus:border-primary focus:ring-primary"
+                                id="fullName" type="text" value="Alex Traveller" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                                for="email">Email Address</label>
+                            <input
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-800 dark:text-white text-sm focus:border-primary focus:ring-primary"
+                                id="email" type="email" value="alex@routecraft.com" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1"
+                                for="currency">Preferred Currency</label>
+                            <select
+                                class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-800 dark:text-white text-sm focus:border-primary focus:ring-primary"
+                                id="currency">
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="JPY">JPY (¥)</option>
+                            </select>
+                        </div>
+                        <div class="pt-2">
+                            <button
+                                class="w-full py-2.5 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all text-sm"
+                                type="button">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                        <span class="material-icons text-primary">flight_takeoff</span>
+                        My Journeys
+                    </h3>
+                    <button class="text-sm font-medium text-primary hover:text-primary-hover flex items-center gap-1">
+                        View All
+                        <span class="material-icons text-base">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                        <div class="relative h-40">
+                            <img alt="Thumbnail of Kyoto temple in autumn" class="w-full h-full object-cover"
+                                data-alt="Traditional Japanese temple surrounded by autumn foliage in Kyoto"
+                                data-location="Kyoto, Japan"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwWGCeCJePusvV8dFlgD3Pp1P6rQ998CbTdbouaWjavGfcCfR4BXXUzOscVCQbF7pzshgd43gRGjvZkbwFIvelhl9omwa4h0ghHL6vStal2HEBf9T3CftjZ3zjese5mbFjOkDIl2kt95mpXGDJUzXSRLQnI10Rju3Y_3L-6Ztpeufzl_i8g1goR3QRPLp18NrzLSx0hDtNtOh8dyLvCXRVV7mG0yOcJJlyLqEJ5HT2Heu3M2LLrLsdjRMiCW1lMMEX57K-bhKulbfn" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4">
+                                <span
+                                    class="bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+                                    Completed
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4
+                                    class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">
+                                    Summer in Kyoto</h4>
+                                <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                    <span class="material-icons">more_horiz</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons text-base">calendar_today</span>
+                                    <span>Oct 12 - Oct 20</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <div class="text-xs font-medium text-slate-400 uppercase tracking-wide">Budget Spent
+                                </div>
+                                <div
+                                    class="font-bold text-slate-800 dark:text-white bg-primary/10 text-primary px-2 py-1 rounded-lg text-sm">
+                                    $2,400
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                        <div class="relative h-40">
+                            <img alt="Thumbnail of desert road trip" class="w-full h-full object-cover"
+                                data-alt="Long desert highway stretching into mountains under a blue sky"
+                                data-location="Arizona, USA"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7a0MoSnUQ6j-J0HJhk0qLzIHJ9ypEgESpvPGRxuy64ISuMaBaZZeVr5FHmxfGxCGCwRPZOb_fw3V-NqzvCOdITWBDv3F_sc8XyVclDt3fX1KJvPHqUsxFc9lq5AoB9dX6K8iiRLRL5tZr2r54XrNGvmzg3DrXl_ospRSMOK63qvv3HGwKWLmTqhMK8RuxWA1ZzuAlc_veAvsOLqBPsCoAKFAPp4ygSIodDikeitmKPlslbF-LxoAgWdFdM2NBhOzjXaGjAxmU087_" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4">
+                                <span
+                                    class="bg-primary text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-lg shadow-primary/30">
+                                    Upcoming
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4
+                                    class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">
+                                    Roadtrip USA</h4>
+                                <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                    <span class="material-icons">more_horiz</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons text-base">calendar_today</span>
+                                    <span>Nov 05 - Nov 15</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <div class="text-xs font-medium text-slate-400 uppercase tracking-wide">Est. Budget
+                                </div>
+                                <div
+                                    class="font-bold text-slate-800 dark:text-white bg-primary/10 text-primary px-2 py-1 rounded-lg text-sm">
+                                    $1,800
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div
+                        class="group bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg border border-slate-200 dark:border-slate-800 overflow-hidden transition-all duration-300 hover:-translate-y-1">
+                        <div class="relative h-40">
+                            <img alt="Thumbnail of Paris Eiffel Tower" class="w-full h-full object-cover"
+                                data-alt="View of the Eiffel Tower over Parisian rooftops" data-location="Paris, France"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBde9xFNP6wosbwXCO44FS9Am3DMBb8k9d5sNmgb7UU2Q2-iHarSDQAhQMZA2cpdDLAXKBwXgm8m-tjAOGuqs60ysx3SV8QN0YvddAOjhn3502hX17H7_bCAac_AWT8ivDPI1KqpDQFIWGI72a0rnitJ9WUZ0p9eOW6W1IjFfOt7EeBQ1FnShMqIsJAcln5KGhLQozTzW8iTwI9y7secW3_WftlZy7Z1zQG58WZxCBHdDDMmF6LjVLNYgLGF_u-qnaAfwBzC-g0s4NL" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-4">
+                                <span
+                                    class="bg-amber-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-lg shadow-amber-500/30">
+                                    Planning
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4
+                                    class="text-lg font-bold text-slate-800 dark:text-white group-hover:text-primary transition-colors">
+                                    Paris Getaway</h4>
+                                <button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                                    <span class="material-icons">more_horiz</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons text-base">calendar_today</span>
+                                    <span>Dec 20 - Dec 26</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800/50">
+                                <div class="text-xs font-medium text-slate-400 uppercase tracking-wide">Est. Budget
+                                </div>
+                                <div
+                                    class="font-bold text-slate-800 dark:text-white bg-primary/10 text-primary px-2 py-1 rounded-lg text-sm">
+                                    $3,200
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button
+                        class="group flex flex-col items-center justify-center h-full min-h-[300px] bg-slate-50 dark:bg-slate-800/30 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-primary hover:bg-primary/5 transition-all duration-300">
+                        <div
+                            class="h-14 w-14 rounded-full bg-slate-200 dark:bg-slate-700 group-hover:bg-primary group-hover:text-white text-slate-400 flex items-center justify-center transition-colors mb-3">
+                            <span class="material-icons text-3xl">add</span>
+                        </div>
+                        <span
+                            class="font-bold text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors">Plan
+                            New Trip</span>
+                        <span class="text-sm text-slate-400 mt-1">Start your next adventure</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

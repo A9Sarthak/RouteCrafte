@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trip Analytics Dashboard - RouteCraft</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#182830",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200">
+    
+    <nav
+        class="bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-primary/10 p-2 rounded-lg">
+                        <span class="material-icons-outlined text-primary text-2xl">map</span>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">RouteCraft</span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="p-2 text-slate-500 hover:text-primary transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <span class="material-icons-outlined">notifications</span>
+                    </button>
+                    <a href="user_account_info.html"
+                        class="h-8 w-8 rounded-full bg-gradient-to-tr from-primary to-purple-400 overflow-hidden border-2 border-white dark:border-slate-700 block">
+                        <img alt="User Avatar" class="h-full w-full object-cover" data-alt="User profile avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkQrpBl2LKsVm5AdpVzzBsXW_9-iw5WjAXpGygdtyLSzMvG0g9P6z0WQ49FU2I614kRwiOCGnlaDjJy5jyxPO96W7PEJqKp4gGJ7hMKrgOvLUe5u_WTPBcegU0adSaaO03qNp32jXB-FtSLZ4bQlIGI7c-YuWwdKQor8lnQFqKPqUN_jMvdD4if2Y5me1qsUZ2huTPDu9FB-BMk0bfvGEYk5a01SrsRaWHo6pLeQThvQTdC514Sv8Qig4TZ2pmgaZsPNeeTnMTO_6v" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="flex-grow py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        
+        <div class="mb-10">
+            <nav aria-label="Breadcrumb" class="flex mb-4">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3 text-sm text-slate-500 dark:text-slate-400">
+                    <li class="inline-flex items-center hover:text-primary transition-colors">
+                        <a class="inline-flex items-center font-medium" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <span class="material-icons-outlined text-lg mx-1">chevron_right</span>
+                            <a class="hover:text-primary transition-colors font-medium" href="user_account_info.html">My
+                                Trips</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <span class="material-icons-outlined text-lg mx-1">chevron_right</span>
+                            <span class="text-primary font-medium">Europe Summer 2024</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Trip
+                        Overview</h1>
+                    <p class="mt-2 text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                        <span class="material-icons-outlined text-sm">calendar_today</span>
+                        June 12 - June 26, 2024
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
+                        <span class="material-icons-outlined text-lg">ios_share</span>
+                        Share
+                    </button>
+                    <button
+                        class="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
+                        <span class="material-icons-outlined text-lg">file_download</span>
+                        Export
+                    </button>
+                    <a href="journey_timeline.html"
+                        class="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/30 hover:bg-sky-500 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5">
+                        <span class="material-icons-outlined text-lg">edit</span>
+                        Edit Trip
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
+            
+            <div
+                class="group relative bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all duration-300 overflow-hidden">
+                
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-white via-transparent to-primary/5 dark:from-surface-dark dark:to-primary/10 opacity-60">
+                </div>
+                <div class="relative flex items-start justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Total Duration</p>
+                        <h3 class="text-4xl font-bold text-slate-900 dark:text-white mb-2">14 <span
+                                class="text-2xl font-semibold text-slate-500">Days</span></h3>
+                        <p class="text-sm text-green-500 font-medium flex items-center gap-1">
+                            <span class="material-icons-outlined text-base">trending_up</span>
+                            Perfect for leisure
+                        </p>
+                    </div>
+                    <div
+                        class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-outlined text-3xl">schedule</span>
+                    </div>
+                </div>
+                <div class="relative mt-6 h-1.5 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                    <div class="absolute top-0 left-0 h-full w-3/4 bg-primary rounded-full"></div>
+                </div>
+                <p class="relative mt-2 text-xs text-slate-400 text-right">75% planned</p>
+            </div>
+            
+            <div
+                class="group relative bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all duration-300 overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-bl from-white via-transparent to-primary/5 dark:from-surface-dark dark:to-primary/10 opacity-60">
+                </div>
+                <div class="relative flex items-start justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Checkpoints</p>
+                        <h3 class="text-4xl font-bold text-slate-900 dark:text-white mb-2">8 <span
+                                class="text-2xl font-semibold text-slate-500">Stops</span></h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1">
+                            Avg. 1.7 days per stop
+                        </p>
+                    </div>
+                    <div
+                        class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-outlined text-3xl">place</span>
+                    </div>
+                </div>
+                
+                <div class="relative mt-6 flex items-center justify-between px-1">
+                    <div class="h-2 w-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
+                    <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+                    <div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                    <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+                    <div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                    <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+                    <div class="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                    <div class="h-0.5 flex-1 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+                    <div class="h-2 w-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
+                </div>
+            </div>
+            
+            <div
+                class="group relative bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all duration-300 overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-green-500/5 dark:from-surface-dark dark:to-green-500/10 opacity-60">
+                </div>
+                <div class="relative flex items-start justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Budget Per Day</p>
+                        <h3 class="text-4xl font-bold text-slate-900 dark:text-white mb-2">$150</h3>
+                        <p class="text-sm text-green-500 font-medium flex items-center gap-1">
+                            <span class="material-icons-outlined text-base">check_circle</span>
+                            Within limit
+                        </p>
+                    </div>
+                    <div
+                        class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-outlined text-3xl">account_balance_wallet</span>
+                    </div>
+                </div>
+                <div class="relative mt-6 flex items-end gap-1 h-8">
+                    
+                    <div class="w-1/6 bg-primary/20 hover:bg-primary/40 rounded-t-sm h-[40%] transition-all"></div>
+                    <div class="w-1/6 bg-primary/30 hover:bg-primary/50 rounded-t-sm h-[60%] transition-all"></div>
+                    <div class="w-1/6 bg-primary/60 hover:bg-primary/80 rounded-t-sm h-[80%] transition-all"></div>
+                    <div
+                        class="w-1/6 bg-primary hover:bg-primary rounded-t-sm h-[50%] transition-all relative group/bar">
+                        <div
+                            class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition-opacity whitespace-nowrap">
+                            Avg</div>
+                    </div>
+                    <div class="w-1/6 bg-primary/40 hover:bg-primary/60 rounded-t-sm h-[70%] transition-all"></div>
+                    <div class="w-1/6 bg-primary/20 hover:bg-primary/40 rounded-t-sm h-[45%] transition-all"></div>
+                </div>
+            </div>
+            
+            <div
+                class="group relative bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-md transition-all duration-300 overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tl from-white via-transparent to-primary/5 dark:from-surface-dark dark:to-primary/10 opacity-60">
+                </div>
+                <div class="relative flex items-start justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">Avg. Per
+                            Checkpoint</p>
+                        <h3 class="text-4xl font-bold text-slate-900 dark:text-white mb-2">$450</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1">
+                            Excludes transport
+                        </p>
+                    </div>
+                    <div
+                        class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons-outlined text-3xl">local_offer</span>
+                    </div>
+                </div>
+                <div class="relative mt-7 flex items-center justify-between gap-4">
+                    <div class="flex-1 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-2 flex items-center gap-2">
+                        <div class="h-2 w-2 rounded-full bg-primary"></div>
+                        <span class="text-xs font-medium text-slate-600 dark:text-slate-300">Hotels 60%</span>
+                    </div>
+                    <div class="flex-1 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-2 flex items-center gap-2">
+                        <div class="h-2 w-2 rounded-full bg-cyan-300"></div>
+                        <span class="text-xs font-medium text-slate-600 dark:text-slate-300">Food 30%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div
+            class="mt-8 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 relative h-64 w-full group">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 flex items-end p-6">
+                <div class="flex justify-between items-end w-full text-white">
+                    <div>
+                        <h4 class="font-bold text-lg">Route Preview</h4>
+                        <p class="text-sm text-slate-200">Paris → Lyon → Marseille → Nice</p>
+                    </div>
+                    <button
+                        class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-white/30">
+                        View Full Map
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-full h-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                <div class="w-full h-full bg-cover bg-center" data-alt="Aerial view of European city landscape"
+                    data-location="Europe"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWYJqMInaJDtuPiE3ATW93XmjUzfsYl_qPmdzvjAGnhSpG-NxSJcsO6IiXdQ6p3RA7L4kMxd8d64lbJHf4sRhSx4tZxqmvsWFIVasCjV1GAUPPikZWMTUZoz-NMgOsIu7qFhkIvNptTZSkeU8NeJbo7dwUgZe_pbFVWW0lAMWUPJLQ9tX9jIIdff4Rfh8YfkZMQZhokPQpD_ngOOadcKuZiKQqkQtK4fFWnsSF_n67uApcj3KunWIQlyw5gbbpvuCvm5AeA3EcIiNa');">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

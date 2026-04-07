@@ -1,0 +1,358 @@
+{
+  "admins": [
+    {
+      "id": "admin-1",
+      "name": "RouteCraft Admin",
+      "email": "admin@routecraft.local",
+      "passwordHash": "$2a$10$5pC2EZsWki04j/w8BfQdyemYK8Ov7Z49vzfNnLctEJXhRTPKIpx2W",
+      "roles": [
+        "superadmin"
+      ],
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "lastLogin": "2025-01-12T09:15:00.000Z",
+      "profile": {
+        "avatar": "https://example.com/avatars/admin.png",
+        "timezone": "UTC",
+        "phone": "+1-555-000-0000",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "dark"
+        }
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Alex Traveller",
+      "email": "alex@routecraft.com",
+      "passwordHash": "$2a$10$tJLH3TP0Y4EkcaZnoSREA.RnfVP7jH9U7lfTw1T/zPN1kmgi.lQdW",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2024-03-10T00:00:00.000Z",
+      "profile": {
+        "avatar": "https://example.com/avatars/alex.png",
+        "timezone": "America/New_York",
+        "phone": "+1-555-111-2222",
+        "preferences": {
+          "currency": "USD",
+          "units": "imperial",
+          "theme": "light"
+        }
+      }
+    },
+    {
+      "id": "user-QlQMzMWd",
+      "name": "khush",
+      "email": "hlo!@gmail.com",
+      "passwordHash": "$2a$10$pYa6hLtu2SnKgeU0GdiG1uLf5VTGspLKH/wZ/1WWObosgpMgQOv.S",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2026-03-28T10:28:10.007Z",
+      "profile": {
+        "avatar": "",
+        "timezone": "UTC",
+        "phone": "",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "light"
+        }
+      }
+    },
+    {
+      "id": "user-0eVUHomn",
+      "name": "Sarthak",
+      "email": "sarthaka700@gmail.com",
+      "passwordHash": "$2a$10$FA5ouVCqIueHgHHOTh90fuX5DPfmUZ31SihkEb7p2EVrTH8AMf9i6",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2026-04-03T20:56:44.046Z",
+      "profile": {
+        "avatar": "",
+        "timezone": "UTC",
+        "phone": "",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "light"
+        }
+      }
+    },
+    {
+      "id": "user-a_JnOkAp",
+      "name": "Test User",
+      "email": "test@test.com",
+      "passwordHash": "$2a$10$weIxwpPreFPBcnqWD45wFOTy.ZzAcWJwL4XOwD6kjKUjXGdq1oghK",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2026-04-03T21:06:28.104Z",
+      "profile": {
+        "avatar": "",
+        "timezone": "UTC",
+        "phone": "",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "light"
+        }
+      }
+    },
+    {
+      "id": "user-o05TBGYQ",
+      "name": "Browser Tester",
+      "email": "test@test.comtest_browser_user@example.com",
+      "passwordHash": "$2a$10$qHObS5kw7BSrSsq.H115teN6RmcE97DqNG5WCKnlMT4T6t8PodlKK",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2026-04-03T21:21:32.183Z",
+      "profile": {
+        "avatar": "",
+        "timezone": "UTC",
+        "phone": "",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "light"
+        }
+      }
+    },
+    {
+      "id": "user-Z5i3LX6U",
+      "name": "Test User",
+      "email": "tester123@example.com",
+      "passwordHash": "$2a$10$506W1a0iBJMUXGLtonwTq.TwEoBj6OFkFIgTFT5LTY.h09AijRBUK",
+      "roles": [
+        "user"
+      ],
+      "createdAt": "2026-04-03T21:39:54.473Z",
+      "profile": {
+        "avatar": "",
+        "timezone": "UTC",
+        "phone": "",
+        "preferences": {
+          "currency": "USD",
+          "units": "metric",
+          "theme": "light"
+        }
+      }
+    }
+  ],
+  "journeys": [
+    {
+      "id": "journey-1",
+      "ownerId": "admin-1",
+      "title": "Europe Summer 2024",
+      "dateRange": "2024-06-12 to 2024-06-26",
+      "checkpoints": [
+        "Paris",
+        "Lyon",
+        "Marseille",
+        "Nice"
+      ],
+      "budget": {
+        "perDay": 150,
+        "perCheckpoint": 450,
+        "currency": "USD"
+      },
+      "status": "planned",
+      "transport": [
+        "train",
+        "car",
+        "metro"
+      ],
+      "notes": "Hotels are refundable; build timeline after flights are confirmed.",
+      "visibility": "private"
+    },
+    {
+      "id": "journey-2",
+      "ownerId": "admin-1",
+      "title": "Roadtrip USA",
+      "dateRange": "2024-11-05 to 2024-11-15",
+      "checkpoints": [
+        "Los Angeles",
+        "Grand Canyon",
+        "Santa Fe",
+        "Austin"
+      ],
+      "budget": {
+        "total": 1800,
+        "currency": "USD"
+      },
+      "status": "upcoming",
+      "transport": [
+        "car"
+      ],
+      "notes": "Bring National Parks pass; book motels 48h before arrival.",
+      "visibility": "team"
+    },
+    {
+      "id": "journey-3",
+      "ownerId": "user-1",
+      "title": "Kyoto Autumn Escape",
+      "dateRange": "2024-10-12 to 2024-10-20",
+      "checkpoints": [
+        "Kyoto",
+        "Osaka",
+        "Nara"
+      ],
+      "budget": {
+        "total": 2400,
+        "perDay": 300,
+        "currency": "USD"
+      },
+      "status": "completed",
+      "transport": [
+        "shinkansen",
+        "metro",
+        "walk"
+      ],
+      "notes": "Favor temples and food markets; add analytics for spend vs plan.",
+      "visibility": "private"
+    },
+    {
+      "id": "journey-SN5zDps2",
+      "ownerId": "user-QlQMzMWd",
+      "title": "agara → hlo",
+      "dateRange": "",
+      "checkpoints": [
+        "agara",
+        "Agra, Uttar Pradesh",
+        "hlo"
+      ],
+      "budget": {},
+      "status": "planned",
+      "transport": [],
+      "notes": "",
+      "visibility": "private",
+      "createdAt": "2026-03-28T10:39:54.344Z",
+      "updatedAt": "2026-03-28T10:39:54.344Z"
+    },
+    {
+      "id": "journey-eK_qLxGR",
+      "ownerId": "user-0eVUHomn",
+      "title": "india → london",
+      "dateRange": "2026-04-08 to 2026-04-22",
+      "checkpoints": [
+        "india",
+        "Agra, Uttar Pradesh",
+        "london"
+      ],
+      "budget": {
+        "total": 25000,
+        "currency": "INR"
+      },
+      "status": "planned",
+      "transport": [],
+      "notes": "",
+      "visibility": "private",
+      "createdAt": "2026-04-03T21:09:34.173Z",
+      "updatedAt": "2026-04-03T21:09:34.173Z"
+    },
+    {
+      "id": "journey-k2_q29GF",
+      "ownerId": "user-o05TBGYQ",
+      "title": "London → Rome",
+      "dateRange": "",
+      "checkpoints": [
+        {
+          "name": "London",
+          "lat": 51.5074456,
+          "lng": -0.1277653
+        },
+        {
+          "name": "Paris",
+          "lat": 48.8534951,
+          "lng": 2.3483915
+        },
+        {
+          "name": "Rome",
+          "lat": 41.8933203,
+          "lng": 12.4829321
+        }
+      ],
+      "budget": {
+        "total": 5000,
+        "currency": "INR"
+      },
+      "status": "planned",
+      "transport": [],
+      "notes": "",
+      "visibility": "private",
+      "createdAt": "2026-04-03T21:22:41.454Z",
+      "updatedAt": "2026-04-03T21:22:41.454Z"
+    },
+    {
+      "id": "journey-OMruCldk",
+      "ownerId": "user-0eVUHomn",
+      "title": "india → london",
+      "dateRange": "2026-04-04 to 2026-04-12",
+      "checkpoints": [
+        {
+          "name": "india",
+          "lat": 22.3511148,
+          "lng": 78.6677428
+        },
+        {
+          "name": "Agra, Uttar Pradesh",
+          "lat": 27.1752554,
+          "lng": 78.0098161
+        },
+        {
+          "name": "london",
+          "lat": 51.5074456,
+          "lng": -0.1277653
+        }
+      ],
+      "budget": {
+        "total": 25000,
+        "currency": "INR"
+      },
+      "status": "planned",
+      "transport": [],
+      "notes": "",
+      "visibility": "private",
+      "createdAt": "2026-04-03T21:26:44.549Z",
+      "updatedAt": "2026-04-03T21:26:44.549Z"
+    },
+    {
+      "id": "journey-_ImponSG",
+      "ownerId": "user-Z5i3LX6U",
+      "title": "New York → Los Angeles",
+      "dateRange": "",
+      "checkpoints": [
+        {
+          "name": "New York",
+          "lat": 40.7127281,
+          "lng": -74.0060152
+        },
+        {
+          "name": "Agra, Uttar PradeshChicago",
+          "lat": 49.237193386975484,
+          "lng": 2.6784492297484244
+        },
+        {
+          "name": "Los Angeles",
+          "lat": 34.0536909,
+          "lng": -118.242766
+        }
+      ],
+      "budget": {
+        "total": 50000,
+        "currency": "INR"
+      },
+      "status": "planned",
+      "transport": [],
+      "notes": "",
+      "visibility": "private",
+      "createdAt": "2026-04-03T21:41:40.670Z",
+      "updatedAt": "2026-04-03T21:41:40.670Z"
+    }
+  ]
+}
